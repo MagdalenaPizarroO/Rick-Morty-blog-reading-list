@@ -35,9 +35,6 @@ const Layout = () => {
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="/characters" element={<Characters />} />
 						<Route path="/locations" element={<Locations />} />
-
-
-
 						<Route path='/patito' element={<Patito/>} />
 						{/* la ruta '*' pintará un not found: la ruta no existe (error 404) */}
 						<Route path="*" element={<h1>Not found!</h1>} />
