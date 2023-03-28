@@ -8,6 +8,7 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Characters } from "./views/characters";
 import { Locations } from "./views/locations";
+import { Saludar } from "./views/saludar";
 
 import Patito from "./views/patito";
 import injectContext from "./store/appContext"; //lo veremos el jueves
@@ -32,12 +33,15 @@ const Layout = () => {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						
 						<Route path="/characters" element={<Characters />} />
 						<Route path="/locations" element={<Locations />} />
 						<Route path='/patito' element={<Patito/>} />
+						{/* ruta con parámetros en función del identificador... ;  */}
+						<Route path="/single/:theid" element={<Single />} />
+						<Route path="saludar/:nombre" element={<Saludar/>} />
 						{/* la ruta '*' pintará un not found: la ruta no existe (error 404) */}
-						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="*" element={<h1>Not found!</h1>} /> 
 					</Routes>
 					<Footer />
 				</ScrollToTop>

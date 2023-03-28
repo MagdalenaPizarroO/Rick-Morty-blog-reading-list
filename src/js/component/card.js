@@ -50,7 +50,8 @@ export const CardLocations = () => {
                     <img src={locationsimg} className="card-img-top" alt={location.name}/>
                     <div className="card-body">
                     <h5 className="card-title">{location.name}</h5>
-                    <p className="card-text">{location.species}</p>
+                    <p className="card-text">{location.type}</p>
+                    <p className="card-text">{location.dimension}</p>
                     <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
 
