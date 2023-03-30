@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 
 
 export const Home = () => (
-	<div className="container text-center mt-5">
+	<div className="container text-center mt-5" >
 		<h1>The Blog for Rick and Morty Fans</h1>
 		<p>
 			<img src={homeimg} style={{ width: "700px" }} />
 		</p>
 		<div className="row">
 			<Link className="col" to="/characters">
-				<img className="img-fluid img-thumbnail" src={charactersinfo} style={{ width: "300px" , height: "200px"}} />
+				<img src={charactersinfo} style={{ width: "300px" , height: "200px"}} />
 				<p>Click here to view characters info</p>
 			</Link>
 			<Link className="col" to="/locations">

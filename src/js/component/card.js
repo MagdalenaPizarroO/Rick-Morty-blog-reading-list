@@ -14,8 +14,10 @@ export const Card = () => {
 
     return (
         <div className="container-fluid">
-            
+            <div className="row">
+                
             {characters.map((character)=>(
+                <div className="col-md-4 mb-4">
                 <div className="card" style={{ width: "18rem" }} key={character.id}>
                     <img src={character.image} className="card-img-top" alt={character.name}/>
                     <div className="card-body">
@@ -23,9 +25,11 @@ export const Card = () => {
                     <p className="card-text">{character.species}</p>
                     <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
-
+                    </div>
                 </div>
             ))}
+       
+            </div>
         </div>
         
     );
