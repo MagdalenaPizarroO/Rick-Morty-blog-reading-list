@@ -15,23 +15,23 @@ export const Card = () => {
     return (
         <div className="container-fluid">
             <div className="row">
-                
-            {characters.map((character)=>(
-                <div className="col-md-4 mb-4">
-                <div className="card" style={{ width: "18rem" }} key={character.id}>
-                    <img src={character.image} className="card-img-top" alt={character.name}/>
-                    <div className="card-body">
-                    <h5 className="card-title">{character.name}</h5>
-                    <p className="card-text">{character.species}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+
+                {characters.map((character) => (
+                    <div className="col-md-4 mb-4" key={character.id}>
+                        <div className="card bg-dark border-success" style={{ width: "18rem" }} key={character.id}>
+                            <img src={character.image} className="card-img-top" alt={character.name} />
+                            <div className="card-body text-center">
+                                <h5 className="card-title">{character.name}</h5>
+                                <p className="card-text">{character.species}</p>
+                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-            ))}
-       
+                ))}
+
             </div>
         </div>
-        
+
     );
 };
 
@@ -48,20 +48,24 @@ export const CardLocations = () => {
 
     return (
         <div className="container-fluid">
-            
-            {locations.map((location)=>(
-                <div className="card" style={{ width: "18rem" }} key={location.id}>
-                    <img src={locationsimg} className="card-img-top" alt={location.name}/>
-                    <div className="card-body">
-                    <h5 className="card-title">{location.name}</h5>
-                    <p className="card-text">{location.type}</p>
-                    <p className="card-text">{location.dimension}</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
-                    </div>
+            <div className="row">
 
-                </div>
-            ))}
+                {locations.map((location) => (
+                    <div className="col-md-4 mb-4" key={location.id}>
+                        <div className="card bg-dark border-success" style={{ width: "15rem" }} key={location.id}>
+                            <img src={locationsimg} className="card-img-top" alt={location.name} />
+                            <div className="card-body text-center">
+                                <h5 className="card-title">{location.name}</h5>
+                                <p className="card-text">{location.type}</p>
+                                <p className="card-text">{location.dimension}</p>
+                                <a href="#" className="btn btn-success btn-sm">Go somewhere</a>
+                            </div>
+
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
-        
+
     );
 };
