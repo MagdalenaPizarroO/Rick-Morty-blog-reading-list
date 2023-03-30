@@ -14,7 +14,7 @@ export const Home = () => (
 		</p>
 		<div className="row">
 			<Link className="col" to="/characters">
-				<img src={charactersinfo} style={{ width: "300px" , height: "200px"}} />
+				<img className="img-fluid img-thumbnail" src={charactersinfo} style={{ width: "300px" , height: "200px"}} />
 				<p>Click here to view characters info</p>
 			</Link>
 			<Link className="col" to="/locations">

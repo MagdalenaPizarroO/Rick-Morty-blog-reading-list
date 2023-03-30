@@ -8,9 +8,10 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Characters } from "./views/characters";
 import { Locations } from "./views/locations";
-import { Saludar } from "./views/saludar";
+import { Saludar } from "./views/saludar"; // ejemplo saludar
+import { Gatitos } from "./views/gatitos";
 
-import Patito from "./views/patito";
+import Patito from "./views/patito"; //ejemplo patito
 import injectContext from "./store/appContext"; //lo veremos el jueves
 
 import { Navbar } from "./component/navbar";
@@ -39,7 +40,8 @@ const Layout = () => {
 						<Route path='/patito' element={<Patito/>} />
 						{/* ruta con parámetros en función del identificador... ;  */}
 						<Route path="/single/:theid" element={<Single />} />
-						<Route path="saludar/:nombre" element={<Saludar/>} />
+						<Route path="/gatitos" element={<Gatitos/>} />
+						<Route path="/saludar/:nombre" element={<Saludar/>} />
 						{/* la ruta '*' pintará un not found: la ruta no existe (error 404) */}
 						<Route path="*" element={<h1>Not found!</h1>} /> 
 					</Routes>
