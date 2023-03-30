@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import locationsimg from "../../img/locationsimg.jpeg";
+import { Link } from "react-router-dom";
 
 export const Card = () => {
     const url = "https://rickandmortyapi.com/api/character/";
@@ -23,7 +24,9 @@ export const Card = () => {
                             <div className="card-body text-center">
                                 <h5 className="card-title">{character.name}</h5>
                                 <p className="card-text">{character.species}</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                <Link to={"/character/"+character.id}>
+                                    <button className="btn btn-outline-success">More Info</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Characters } from "./views/characters";
+import { CharacterInfo } from "./views/characterInfo";
 import { Locations } from "./views/locations";
 import { Saludar } from "./views/saludar"; // ejemplo saludar
 import { Gatitos } from "./views/gatitos";
@@ -16,6 +17,7 @@ import injectContext from "./store/appContext"; //lo veremos el jueves
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+
 
 //create your first component
 const Layout = () => {
@@ -36,6 +38,7 @@ const Layout = () => {
 						<Route path="/demo" element={<Demo />} />
 						
 						<Route path="/characters" element={<Characters />} />
+						<Route path="/character/:id" element={<CharacterInfo />} />
 						<Route path="/locations" element={<Locations />} />
 						<Route path='/patito' element={<Patito/>} />
 						{/* ruta con parámetros en función del identificador... ;  */}
