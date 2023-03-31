@@ -20,15 +20,8 @@ export const CharacterInfo = () => {
         <div>
             <h1>I should see the character ID: {param.id}</h1>
             <p>And now... do I see the card? </p>
-
-
-
-
-
-
             <div className="container-fluid">
                 <div className="row">
-
                     {characters.map((character) => (
                         <div className="col-md-4 mb-4" key={character.id}>
                             <div className="card bg-dark border-success" style={{ width: "18rem" }} key={character.id}>
@@ -36,19 +29,12 @@ export const CharacterInfo = () => {
                                 <div className="card-body text-center">
                                     <h5 className="card-title">{character.name}</h5>
                                     <p className="card-text">{character.species}</p>
-                                    
-                                </div>
+                                                                    </div>
                             </div>
                         </div>
                     ))}
-
                 </div>
             </div>
-
         </div>
-
-
-
     );
-
 }
