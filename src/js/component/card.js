@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import locationsimg from "../../img/locationsimg.jpeg";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const Card = () => {
-    const url = "https://rickandmortyapi.com/api/character/";
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
-        fetch(url)
+        fetch("https://rickandmortyapi.com/api/character/")
             .then((response) => response.json())
             .then((data) => setCharacters(data.results))
             .catch((error) => console.log(error));

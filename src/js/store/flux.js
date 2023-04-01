@@ -1,8 +1,8 @@
-const getState = ({ getStore, getActions, setStore }) => {
-	return {
-		store: {
-			demo: [
-				{
+const getState = ({ getStore, getActions, setStore }) => { // función que recibe tres parámetros
+	return { 												//  getStore = info de store; 
+		store: {											// getActions = info de actions; 
+			demo: [											// setStore = modifica store
+				{									
 					title: "FIRST",
 					background: "white",
 					initial: "white"
